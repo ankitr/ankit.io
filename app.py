@@ -4,7 +4,7 @@
 from werkzeug.serving import run_simple
 from werkzeug.wsgi import DispatcherMiddleware
 
-from me import api
+# from me import api
 from me import frontend
 from me.helpers.logs import log
 
