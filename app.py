@@ -13,7 +13,7 @@ from flask import Flask
 app = Flask(__name__)
 
 app.wsgi_app = DispatcherMiddleware(frontend.create_app(), {
-    '/api': api.create_app()
+    # '/api': api.create_app()
 })
 
 if __name__ == '__main__':
