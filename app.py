@@ -1,15 +1,22 @@
-#/usr/bin/env python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from werkzeug.serving import run_simple
+from werkzeug.wsgi import DispatcherMiddleware
+
+from me import api
+from me import frontend
+from me.helpers.logs import log
 
 from flask import Flask
-from flask import Response
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello():
-    return Response('Hi, I\'m Ankit. Email me '
-    '<a href="mailto:me@ankit.io">here</a>. This page is under construction.')
+app.wsgi_app = DispatcherMiddleware(frontend.create_app(), {
+    '/api': api.create_app()
+})
 
 if __name__ == '__main__':
+    log.info('Starting system.')
     app.debug = True
-    app.run(host='0.0.0.0', port=80)
+    app.run()

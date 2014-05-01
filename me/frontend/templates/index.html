@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Ankit</title>
+        {% assets "css_vendor" -%}
+        <link rel="stylesheet" href="{{ ASSET_URL }}">
+        {%- endassets %}
+        <style>
+            html, body, .container {
+                height: 90%;
+            }
+            .container {
+                display: table;
+                vertical-align: middle;
+            }
+            .vertical-center-row {
+                display: table-cell;
+                vertical-align: middle;
+                margin-top: -10%;
+                text-align: center;
+            }
+            img {
+                width: 100%;
+            }
+            p {
+                text-align: justify;
+            }
+            ul {
+                text-align: left;
+            }
+            .secret {
+                color: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row vertical-center-row">
+                <div class="col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1">
+                    <div class="row">
+                        <h1>I'm <a class="secret" href="more">A</a>nkit.</h1>
+                    </div>
+                    <hr>
+                    <p>Hi there. Welcome to my website.</p>
+                    <p>Believe it or not, pretty much everything I would want to put here is better shown on or provided some other service made by significantly more brilliant people. Here are some links to those locations:</p>
+                    <ul>
+                        <li><a href="http://github.com/ankitr" target="_blank">Github</a></li>
+                        <li><a href="mailto:me@ankit.io" target="_blank">Email</a></li>
+                        <li><a href="http://facebook.com/ankitranjan0" target="_blank">Facebook</a></li>
+                        <li><a href="http://twitter.com/ankitr_" target="_blank">Twitter</a></li>
+                        <li><a href="http://linkedin.com/in/ranjanankit">LinkedIn</a></li>
+                    </ul>
+                    <p>Before anyone thinks I've written any actual CSS for this website, have a look at <a href="http://designmodo.github.io/Flat-UI/">Flat UI</a> and <a href="http://getbootstrap.com/">Twitter Bootstrap</a>.</p>
+                    <!-- <p>If you're interested in anything else regarding me, click on the A in my name. Hopefully that will satisfy your curiosity.</p> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
